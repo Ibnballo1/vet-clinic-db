@@ -28,3 +28,8 @@ WHERE name NOT LIKE '%mon';
 COMMIT;
 SELECT * FROM animals;
 
+BEGIN TRANSACTION;
+DELETE FROM animals;
+SELECT * FROM animals;
+ROLLBACK;
+SELECT * FROM animals;
