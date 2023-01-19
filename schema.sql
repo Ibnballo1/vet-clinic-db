@@ -10,3 +10,7 @@ CREATE TABLE animals (
   neutered BOOL,
   weight_kg DECIMAL
 );
+
+-- Day 2
+ALTER TABLE animals
+ADD species varchar(100);
