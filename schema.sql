@@ -13,4 +13,4 @@ CREATE TABLE animals (
 
 -- Day 2
 ALTER TABLE animals
-ADD species varchar(100);
+ADD species VARCHAR(100);
