@@ -28,4 +28,26 @@ VALUES
 ('Pokemon'),
 ('Digimon');
 
+UPDATE animals
+SET species_id = '2'
+WHERE name LIKE '%mon';
 
+UPDATE animals
+SET owner_id = (SELECT id FROM owners WHERE full_name LIKE 'Sam Smith') 
+WHERE name = 'Agumon';
+
+UPDATE animals
+SET owner_id = (SELECT id FROM owners WHERE full_name LIKE 'Jennifer Orwell')
+WHERE name IN ('Gabumon',  'Pikachu');
+
+UPDATE animals
+SET owner_id = (SELECT id FROM owners WHERE full_name LIKE 'Bob')
+WHERE name IN ('Devimon', 'Plantmon');
+
+UPDATE animals
+SET owner_id = (SELECT id FROM owners WHERE full_name LIKE 'Melody Pond')
+WHERE name IN ('Charmander', 'Squirtle', 'Blossom');
+
+UPDATE animals
+SET owner_id = (SELECT id FROM owners WHERE full_name LIKE 'Dean Winchester')
+WHERE name IN ('Angemon', 'Boarmon');
